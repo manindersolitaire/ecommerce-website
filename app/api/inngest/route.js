@@ -10,4 +10,7 @@ export const { GET, POST, PUT } = serve({
     syncUserDeletion,
     createUserOrder
   ],
+  onRequestStart: (req) => {
+    console.log("Inngest request received:", req.method, req.url);
+  },
 });
